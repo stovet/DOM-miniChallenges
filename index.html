@@ -8,13 +8,30 @@
     <title>DOM Mini Challenges</title>
 </head>
 <body>
-    <h1>Total $0.00</h1>
+    <h1><span>Total:</span> $0.00</h1>
     <div id="button-container">
         <button id="cola">LIME COLA $2.00</button>
         <button id="peanuts">SALTED PEANUTS $3.00</button>
         <button id="chocolate">CHOCALATE BAR $4.00</button>
         <button id="gummies">FRUIT GUMMIES $6.00</button>
     </div>
+
+    <form>
+        <div>
+            <label for="number">How many?</label>
+            <input type="number" id="number" name="number">
+        </div>
+        <div>
+            <label for="coins">Which coin?</label>
+            <select id="coins" name="coins">
+                <option value="Penny">Penny</option>
+                <option value="Nickel">Nickel</option>
+                <option value="Dime">Dime</option>
+                <option value="Quarter">Quarter</option>
+            </select>
+        </div>
+        <button id="btn">Make Money</button>
+    </form>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,9 +1,23 @@
-btn {
-    width: 30px;
-    height: 20px;
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button {
+    width: 100px;
+    height: 50px;
+    margin: 5px;
 }
 #button-container {
-    width: 50px;
+    width: 250px;
     display: flex;
-    
+    flex-wrap: wrap;
+    margin-bottom: 50px;
 }
+h1{
+    font-size: 18px;
+}
+span {
+    color: rgb(150, 144, 144);
+}
+

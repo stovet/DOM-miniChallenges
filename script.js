@@ -1,3 +1,6 @@
+
+// VENDING MACHINE MINI CHALLENGE
+
 let colaBtn = document.getElementById("cola");
 let peanutsBtn = document.getElementById("peanuts");
 let chocolateBtn = document.getElementById("chocolate");
@@ -26,3 +29,22 @@ function gummyClick(){
     total += 6;
     h1.innerText = `Total $${total}.00`
 }
+
+/////   MAKE MONEY MINI CHALLENGE
+
+let btn = document.getElementById('btn');
+let input = document.getElementById('coins');
+let amount = 0;
+
+
+function makeMoney(event){
+    event.preventDefault();
+    //amount = input.value;
+    //console.log(amount);
+    console.log("hello")
+}
+
+
+btn.addEventListener('click', makeMoney);
+
+
