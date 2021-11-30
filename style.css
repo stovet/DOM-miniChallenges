@@ -1,0 +1,9 @@
+btn {
+    width: 30px;
+    height: 20px;
+}
+#button-container {
+    width: 50px;
+    display: flex;
+    
+}
