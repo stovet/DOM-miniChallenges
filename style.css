@@ -44,3 +44,28 @@ span {
 .off{
     background-color: rgb(44, 53, 53)
 }
+
+.penny {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(204, 91, 25);
+}
+.nickel {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: gray;
+}
+.dime {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: gray;
+}
+.quarter {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: gray;
+}

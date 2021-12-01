@@ -47,6 +47,15 @@ form.addEventListener('submit', e => {
     for(let i = 0; i < amount; i++){
         const circle = document.createElement("span");
         circle.innerText = coins.value;
+        if(coins.value === "Penny"){
+            circle.classList.add('penny');
+        } else if(coins.value === "Nickel"){
+            circle.classList.add("nickel");
+        } else if(coins.value === "Dime"){
+            circle.classList.add("dime");
+        } else if(coins.value === "Quarter"){
+            circle.classList.add("quarter");
+        }
         coinDiv.append(circle);
         
         //needs to be inside for loop?
