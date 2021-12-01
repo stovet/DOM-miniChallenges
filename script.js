@@ -59,14 +59,36 @@ function removeCoin(event){
     coin.remove();
     
 }
-coin.addEventListener('click', removeCoin);
+//coin.addEventListener('click', removeCoin);
 
 
 
 ////// LIGHT BULB MINI EXERCISE
-
+let lightBulb = document.querySelector(".lightBulb");
 let btnOn = document.getElementById("on");
 let btnOff = document.getElementById("off");
 let btnToggle = document.getElementById("toggle");
 let btnEnd = document.getElementById("end");
+
+//lightBulb.classList.add("off");
+
+btnOn.addEventListener('click', () => {
+    lightBulb.classList.add("on");
+    
+});
+ btnOff.addEventListener('click', () => {
+     lightBulb.classList.remove("on");
+     
+ });
+btnToggle.addEventListener('click', () => {
+     lightBulb.classList.toggle("on");
+});
+
+ btnEnd.addEventListener('click', end => {
+    lightBulb.remove();
+    btnOn.disabled = true;
+    btnOff.disabled = true;
+    btnToggle.disabled = true;
+    btnEnd.disabled = true;
+});
 

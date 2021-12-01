@@ -32,9 +32,15 @@ span {
 
 /* light bulb exercise */
 
-#lightBulb {
+.lightBulb {
     width: 200px;
     height: 50px;
     background-color: rgb(44, 53, 53);
     color: lightgray;
+}
+.on{
+    background-color: yellow;
+}
+.off{
+    background-color: rgb(44, 53, 53)
 }
