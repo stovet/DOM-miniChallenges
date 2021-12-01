@@ -33,18 +33,40 @@ function gummyClick(){
 /////   MAKE MONEY MINI CHALLENGE
 
 let btn = document.getElementById('btn');
-let input = document.getElementById('coins');
+let coins = document.getElementById('coins');
+let form = document.querySelector('form');
+let input = document.querySelector('input');
+let coinDiv = document.getElementById('coinDiv');
+
 let amount = 0;
 
 
-function makeMoney(event){
-    event.preventDefault();
-    //amount = input.value;
-    //console.log(amount);
-    console.log("hello")
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    amount = input.value;
+    for(let i = 0; i < amount; i++){
+        const circle = document.createElement("span");
+    circle.innerText = coins.value;
+    coinDiv.append(circle);
+    }
+})
+
+// delete the clicked coin
+let coin = document.querySelector('span');
+
+function removeCoin(event){
+    
+    coin.remove();
+    
 }
+coin.addEventListener('click', removeCoin);
 
 
-btn.addEventListener('click', makeMoney);
 
+////// LIGHT BULB MINI EXERCISE
+
+let btnOn = document.getElementById("on");
+let btnOff = document.getElementById("off");
+let btnToggle = document.getElementById("toggle");
+let btnEnd = document.getElementById("end");
 
