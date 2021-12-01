@@ -31,37 +31,57 @@ function gummyClick(){
 }
 
 /////   MAKE MONEY MINI CHALLENGE
+//display a total value for the coins currently shown. Make sure it stays up-to-date when coins are added and removed.
+//Replace the select with a group of radio buttons
 
 let btn = document.getElementById('btn');
 let coins = document.getElementById('coins');
 let form = document.querySelector('form');
 let input = document.querySelector('input');
 let coinDiv = document.getElementById('coinDiv');
-
-let amount = 0;
+//extended challenge total
+let totalValue = document.getElementById('totalValue'); // the h1 to display
+let totalOfCoins = 0.0;
+let amountOfCoins = 0;
 
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-    amount = input.value;
-    for(let i = 0; i < amount; i++){
+    amountOfCoins = input.value;
+    for(let i = 0; i < amountOfCoins; i++){
         const circle = document.createElement("span");
         circle.innerText = coins.value;
         if(coins.value === "Penny"){
             circle.classList.add('penny');
+            totalOfCoins += 0.01;
         } else if(coins.value === "Nickel"){
             circle.classList.add("nickel");
+            totalOfCoins += 0.05;
         } else if(coins.value === "Dime"){
             circle.classList.add("dime");
+            totalOfCoins += 0.10;
         } else if(coins.value === "Quarter"){
             circle.classList.add("quarter");
+            totalOfCoins += 0.25;
         }
+        totalValue.innerText = `Total: ${totalOfCoins.toFixed(2)}`;
         coinDiv.append(circle);
         
-        //needs to be inside for loop?
+        //needs to be inside for loop
         circle.addEventListener('click', removeCoin);
         function removeCoin(){
+            
+            if(circle.classList.contains("penny")){
+                totalOfCoins -= 0.01;
+            } else if(circle.classList.contains("nickel")){
+                totalOfCoins -= 0.05;
+            } else if(circle.classList.contains("dime")){
+                totalOfCoins -= 0.10;
+            } else if(circle.classList.contains("quarter")){
+                totalOfCoins -= 0.25;
+            }
             circle.remove();
+            totalValue.innerText = `Total: ${totalOfCoins.toFixed(2)}`;
         }    
     }
 })
