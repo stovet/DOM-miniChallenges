@@ -46,21 +46,16 @@ form.addEventListener('submit', e => {
     amount = input.value;
     for(let i = 0; i < amount; i++){
         const circle = document.createElement("span");
-    circle.innerText = coins.value;
-    coinDiv.append(circle);
+        circle.innerText = coins.value;
+        coinDiv.append(circle);
+        
+        //needs to be inside for loop?
+        circle.addEventListener('click', removeCoin);
+        function removeCoin(){
+            circle.remove();
+        }    
     }
 })
-
-// delete the clicked coin
-let coin = document.querySelector('span');
-
-function removeCoin(event){
-    
-    coin.remove();
-    
-}
-//coin.addEventListener('click', removeCoin);
-
 
 
 ////// LIGHT BULB MINI EXERCISE
